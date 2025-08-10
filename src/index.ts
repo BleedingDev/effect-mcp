@@ -8,8 +8,7 @@ import { Readmes } from "./Readmes.js"
 McpServer.layerHttp({
   name: "effect-mcp",
   version: "0.1.0",
-  stdin: NodeStream.stdin,
-  stdout: NodeSink.stdout,
+  path: "/mcp"
 }).pipe(
   Layer.provide([ReferenceDocsTools, Readmes]),
   Layer.provide(Logger.add(Logger.prettyLogger({ stderr: true }))),
